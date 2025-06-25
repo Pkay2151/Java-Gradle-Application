@@ -20,7 +20,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Upload JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: app-jar
         path: app/build/libs/*.jar
