@@ -17,16 +17,18 @@ repositories {
 }
 
 dependencies {
-    // This dependency is used by the application.
-    implementation libs.guava
+    // Example: Add Guava library
+    implementation 'com.google.guava:guava:32.1.2-jre'
+    // Example: Add JUnit for testing
+    testImplementation 'junit:junit:4.13.2'
 }
 
 testing {
     suites {
         // Configure the built-in test suite
         test {
-            // Use JUnit4 test framework
-            useJUnit('4.13.2')
+            // Use JUnit Jupiter test framework
+            useJUnitJupiter('5.12.1')
         }
     }
 }
