@@ -17,12 +17,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Debug - Check gradlew file
-      run: ls -la gradlew
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
-    - name: Debug - Verify permissions
-      run: ls -la gradlew
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
     - name: Upload JAR
